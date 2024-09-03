@@ -4,8 +4,6 @@ name: Build and Test
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
@@ -39,7 +37,7 @@ jobs:
             # mandatory
             -Dsonar.projectKey=gitlabci-cidevops-java-service
             -Dsonar.projectBaseDir=.
-            -Dsonar.sources=src
+            -Dsonar.sources=datetime-demo/src
             -Dsonar.language=secrets
              
             # Comma-separated paths to directories containing test source files.
